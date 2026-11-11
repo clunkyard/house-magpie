@@ -1,0 +1,63 @@
+{
+  "v": 1,
+  "repository": "clunkyard/house-magpie",
+  "source": {
+    "botId": "c6d9f5f3-6de1-4e64-a995-2d99dfd3df01",
+    "revisionId": "9bfc9e24-f136-4d44-aa02-af0100869d0e",
+    "manifestHash": "df9d3d2d9dd79c0161f5b908ac357b060705f403d599db7b3fafb0703bb3accb"
+  },
+  "visibleManifestHash": "df9d3d2d9dd79c0161f5b908ac357b060705f403d599db7b3fafb0703bb3accb",
+  "language": "glyph",
+  "sourceFiles": [
+    {
+      "path": "bot.json",
+      "mode": 420,
+      "size": 953,
+      "sha256": "7a19bb3d766624585b6e20c41ca967450ba2a5fdb4854f07b7dd43d4122b6519"
+    },
+    {
+      "path": "magpie.glyph",
+      "mode": 384,
+      "size": 2070,
+      "sha256": "45c182a936431336c1a52616042cfa27e5671f9c9e02935cccdb267239e8a320"
+    }
+  ],
+  "directories": [],
+  "managed": [
+    {
+      "path": ".clunkyard-source.json",
+      "sha256": "965a12ff447e52a9954bd20515faf8cc7526edff351cc313b45cc1cb45583ee0",
+      "mode": 420
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e8b41e5528b2d3a8ae4c5dabfcd32ef50c05fff41de096c3701059b5c68a80db",
+      "mode": 420
+    },
+    {
+      "path": "bot.json",
+      "sha256": "7a19bb3d766624585b6e20c41ca967450ba2a5fdb4854f07b7dd43d4122b6519",
+      "mode": 420
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "652cbd0ba5e21c5b7ee7a52b539cc9087b38b1bfc3ae0baacc6828c8dfdf2e95",
+      "mode": 420
+    },
+    {
+      "path": "magpie.glyph",
+      "sha256": "45c182a936431336c1a52616042cfa27e5671f9c9e02935cccdb267239e8a320",
+      "mode": 384
+    },
+    {
+      "path": "Makefile",
+      "sha256": "b41bef136a1fec767be62431121a98d96259ccd8415fc3d71665b22efcd8f79d",
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "sha256": "bd86e9fb9932c5d6b3c24d9c380a40ea40dc0f0406c89b5ab3bdbbd3e749be95",
+      "mode": 420
+    }
+  ]
+}

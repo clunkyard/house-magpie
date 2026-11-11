@@ -1,0 +1,52 @@
+{
+  "name": "Magpie",
+  "language": "glyph",
+  "protocol": 2,
+  "entry": "magpie.glyph",
+  "supportedModes": [
+    "2d"
+  ],
+  "supportedRulesets": [
+    "classic"
+  ],
+  "resourceModes": [
+    "open"
+  ],
+  "strategist": {
+    "params": [
+      "aggression",
+      "reach",
+      "power",
+      "weave"
+    ],
+    "ranges": {
+      "aggression": {
+        "min": -1,
+        "max": 1,
+        "step": 0.05
+      },
+      "reach": {
+        "min": -1,
+        "max": 1,
+        "step": 0.05
+      },
+      "power": {
+        "min": -1,
+        "max": 1,
+        "step": 0.05
+      },
+      "weave": {
+        "min": -1,
+        "max": 1,
+        "step": 0.05
+      }
+    }
+  },
+  "publicDescription": "Weaves in on its target and leads its shots. Its coach sets how close it weaves, how far it fires, its shot weight and the width of its weave.",
+  "command": [
+    "node",
+    "src/dsl/runner.js",
+    "glyph",
+    "bots/llm/magpie/magpie.glyph"
+  ]
+}
