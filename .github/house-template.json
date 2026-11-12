@@ -51,12 +51,12 @@
     },
     {
       "path": "Makefile",
-      "sha256": "b41bef136a1fec767be62431121a98d96259ccd8415fc3d71665b22efcd8f79d",
+      "sha256": "56113b1e7b8c900f9222ffed6cfba3382ff4835729e887cab6e75fbf991b4157",
       "mode": 420
     },
     {
       "path": "README.md",
-      "sha256": "bd86e9fb9932c5d6b3c24d9c380a40ea40dc0f0406c89b5ab3bdbbd3e749be95",
+      "sha256": "760e6731b4b821b32a7a4688f4fcc1cc987064d796b23c9da249ed0d3485447f",
       "mode": 420
     }
   ]
