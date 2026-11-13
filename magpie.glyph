@@ -1,8 +1,4 @@
-# Magpie, of Gullwing Salvage: weaves in on its target, leads its shots,
-# steps out of the storm and keeps inside the safe zone. Its coach turns
-# four dials between ticks. Each reads 0 until the coach sets it, and 0 is
-# the robot's own sound baseline; each runs from -1 to 1.
-#
+# Magpie, of Gullwing Salvage: steady-aim variant. Weaves only while the turret is off target, then holds a straight line to land shots.
 #   param.aggression  closes the range (1, about 150) or opens it (-1, about 410)
 #   param.reach       how far it fires from: 1 adds 250, -1 takes 250 off
 #   param.power       heavier (1) or lighter (-1) shots than the range suggests
@@ -15,9 +11,8 @@ memory shot 1
 : low-battery  battery-fraction 0.25 < ;
 
 : track
-  # Circle, bending in when too far and out when too close, with a weave.
-  bearing 90 + range 280 130 param.aggression * - - 0.4 * 60 neg 60 clamp -
-  tick 7.2 * sin 30 20 param.weave * + * + heading angle 45 / clamp1 turn!
+  bearing 90 + range 280 130 param.aggression * - - 0.25 * 40 neg 40 clamp -
+  tick 7.2 * sin 30 20 param.weave * + * aim-error abs 2 > * + heading angle 45 / clamp1 turn!
   0.5 low-battery 0.25 * - drive!
   bearing aim!
   bearing scan-heading!
@@ -25,7 +20,7 @@ memory shot 1
   range shot-speed-base - shot-speed-per-power / param.power + power-min power-max clamp
   dup shot! power!
   cooldown 0 =
-  aim-error abs 3 < and
+  aim-error abs 2 < and
   range 520 250 param.reach * + < and
   battery shot-cost-base shot-cost-per-power shot@ * + 10 + >= and
   fire!
@@ -50,8 +45,6 @@ memory shot 1
 ;
 
 : escape
-  # Out across the storm's path, on the side away from its centre: square
-  # to its heading, leaning a third of the way to straight out.
   storm-bearing 180 + dup storm-heading angle 100 * 1 neg 1 clamp 90 * storm-heading +
   swap over angle 3 / +
 ;
